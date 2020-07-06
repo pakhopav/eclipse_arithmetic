@@ -3,23 +3,62 @@
  */
 package org.xtext.arithmetic.validation;
 
+import java.math.BigDecimal;
 
+import org.eclipse.emf.common.util.TreeIterator;
+import org.eclipse.emf.ecore.EObject;
+import org.eclipse.xtext.EcoreUtil2;
+import emf.arithmetics.ArithmeticsPackage;
+import emf.arithmetics.Div;
+import emf.arithmetics.Evaluation;
+import emf.arithmetics.Expression;
+import emf.arithmetics.FunctionCall;
+import emf.arithmetics.NumberLiteral;
+import org.xtext.arithmetics.interpreter.Calculator;
+
+import com.google.inject.Inject;
+
+import org.eclipse.xtext.validation.Check;
+import org.eclipse.xtext.validation.ValidationMessageAcceptor;
 /**
  * This class contains custom validation rules. 
  *
  * See https://www.eclipse.org/Xtext/documentation/303_runtime_concepts.html#validation
  */
 public class ArithmeticValidator extends AbstractArithmeticValidator {
-	
-//	public static final String INVALID_NAME = "invalidName";
-//
-//	@Check
-//	public void checkGreetingStartsWithCapital(Greeting greeting) {
-//		if (!Character.isUpperCase(greeting.getName().charAt(0))) {
-//			warning("Name should start with a capital",
-//					ArithmeticPackage.Literals.GREETING__NAME,
-//					INVALID_NAME);
-//		}
-//	}
-	
+	public static final String NORMALIZABLE = "normalizable-expression";
+
+	@Inject
+	private Calculator calculator;
+
+	@Check
+	public void checkDivByZero(Div div) {
+		double value = calculator.evaluate(div.getRight()).doubleValue();
+		if (Double.compare(value, 0.0) == 0) {
+			error("Division by zero detected.", ArithmeticsPackage.Literals.DIV__RIGHT);
+		}
+	}
+
+	@Check
+	public void checkNormalizable(Expression expr) {
+		if (expr instanceof NumberLiteral || expr instanceof FunctionCall) {
+			return;
+		}
+		Evaluation eval = EcoreUtil2.getContainerOfType(expr, Evaluation.class);
+		if (eval != null) {
+			return;
+		}
+		TreeIterator<EObject> contents = expr.eAllContents();
+		while (contents.hasNext()) {
+			EObject next = contents.next();
+			if ((next instanceof FunctionCall)) {
+				return;
+			}
+		}
+		BigDecimal decimal = calculator.evaluate(expr);
+		if (decimal.toString().length() <= 8) {
+			warning("Expression could be normalized to constant \'" + decimal + "\'", null, ValidationMessageAcceptor.INSIGNIFICANT_INDEX,
+					ArithmeticValidator.NORMALIZABLE, decimal.toString());
+		}
+	}
 }
