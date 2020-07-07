@@ -11,6 +11,13 @@ Require-Bundle: org.xtext.arithmetic,
  org.eclipse.xtext.testing,
  org.eclipse.xtext.xbase.testing,
  org.eclipse.xtext.xbase.lib;bundle-version="2.14.0",
- emf.arithmetics;bundle-version="0.1.0"
+ emf.arithmetics;bundle-version="0.1.0", org.eclipse.xtext,
+ org.eclipse.xtext.xbase,
+ org.eclipse.equinox.common;bundle-version="3.5.0",
+ org.eclipse.xtext.util,
+ org.antlr.runtime;bundle-version="[3.2.0,3.2.1)",
+ org.eclipse.emf.common,
+ org.eclipse.emf.ecore,
+ org.eclipse.xtend.lib;bundle-version="2.14.0"
 Bundle-RequiredExecutionEnvironment: JavaSE-11
 Export-Package: org.xtext.arithmetic.tests;x-internal=true

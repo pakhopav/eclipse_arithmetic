@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:diagram="http://www.eclipse.org/sirius/diagram/1.1.0" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description">
-  <viewpoint:DAnalysis uid="_EO0y8L95EequV9GGLOU0SA" selectedViews="_EPlA4L95EequV9GGLOU0SA" version="14.3.1.202003261200">
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:diagram="http://www.eclipse.org/sirius/diagram/1.1.0" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/style/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description/style">
+  <viewpoint:DAnalysis uid="_EO0y8L95EequV9GGLOU0SA" selectedViews="_EPlA4L95EequV9GGLOU0SA _TGQSsL-kEeqWXq134IWdKQ" version="14.3.1.202003261200">
     <semanticResources>arithmetics.genmodel</semanticResources>
     <semanticResources>arithmetics.ecore</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_EPlA4L95EequV9GGLOU0SA">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_EP370795EequV9GGLOU0SA" name="arithmetics" repPath="#_EPxOIL95EequV9GGLOU0SA" changeId="62cb13fb-afbe-4620-be7f-08e4c02ccbf2">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_EP370795EequV9GGLOU0SA" name="arithmetics" repPath="#_EPxOIL95EequV9GGLOU0SA" changeId="a777a0c2-b8a4-4620-997f-3915bbd98b38">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
         <target xmi:type="ecore:EPackage" href="arithmetics.ecore#/"/>
       </ownedRepresentationDescriptors>
+    </ownedViews>
+    <ownedViews xmi:type="viewpoint:DView" uid="_TGQSsL-kEeqWXq134IWdKQ">
+      <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Archetype']"/>
     </ownedViews>
   </viewpoint:DAnalysis>
   <diagram:DSemanticDiagram uid="_EPxOIL95EequV9GGLOU0SA">
@@ -17,14 +20,34 @@
     </ownedAnnotationEntries>
     <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_EP371L95EequV9GGLOU0SA" source="GMF_DIAGRAMS">
       <data xmi:type="notation:Diagram" xmi:id="_EP371b95EequV9GGLOU0SA" type="Sirius" element="_EPxOIL95EequV9GGLOU0SA" measurementUnit="Pixel">
+        <children xmi:type="notation:Node" xmi:id="_TJ2ZQL-kEeqWXq134IWdKQ" type="2001" element="_TJBS0L-kEeqWXq134IWdKQ">
+          <children xmi:type="notation:Node" xmi:id="_TKGQ4L-kEeqWXq134IWdKQ" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_TKGQ4b-kEeqWXq134IWdKQ" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_TT7iUL-kEeqWXq134IWdKQ" type="3005" element="_TJE9ML-kEeqWXq134IWdKQ">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_TT7iUb-kEeqWXq134IWdKQ" fontName=".AppleSystemUIFont"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_TT7iUr-kEeqWXq134IWdKQ"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_TJ2ZQb-kEeqWXq134IWdKQ" fontName=".AppleSystemUIFont" fontHeight="8"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_TJ2ZQr-kEeqWXq134IWdKQ" width="500" height="90"/>
+        </children>
         <styles xmi:type="notation:DiagramStyle" xmi:id="_EP371r95EequV9GGLOU0SA"/>
       </data>
     </ownedAnnotationEntries>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_TJBS0L-kEeqWXq134IWdKQ" width="-1" height="-1">
+      <target xmi:type="ecore:EPackage" href="arithmetics.ecore#/"/>
+      <semanticElements xmi:type="ecore:EPackage" href="arithmetics.ecore#/"/>
+      <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_TJE9ML-kEeqWXq134IWdKQ" showIcon="false" labelPosition="node" workspacePath="/org.eclipse.emf.ecoretools.design/icons/full/back/empty.svg">
+        <description xmi:type="style:WorkspaceImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@nodeMappings[name='Empty%20Diagram']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@nodeMappings[name='Empty%20Diagram']"/>
+    </ownedDiagramElements>
     <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
     <filterVariableHistory xmi:type="diagram:FilterVariableHistory" uid="_EPycQL95EequV9GGLOU0SA"/>
     <activatedLayers xmi:type="description_1:Layer" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer"/>
     <activatedLayers xmi:type="description_1:AdditionalLayer" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@additionalLayers[name='Package']"/>
     <activatedLayers xmi:type="description_1:AdditionalLayer" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@additionalLayers[name='Validation']"/>
+    <activatedLayers xmi:type="description_1:AdditionalLayer" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Archetype']/@ownedRepresentationExtensions[name='Entities%20With%20Archetypes']/@layers[name='Archetypes']"/>
     <target xmi:type="ecore:EPackage" href="arithmetics.ecore#/"/>
   </diagram:DSemanticDiagram>
 </xmi:XMI>

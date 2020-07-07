@@ -12,7 +12,7 @@ Workflow {
 		platformUri = "${rootPath}/.."
 		registerGenModelFile = "platform:/resource/emf.arithmetics/model/arithmetics.genmodel"
 	}
-    
+ 
 	component = XtextGenerator {
 		configuration = {
 			project = StandardProjectConfig {
